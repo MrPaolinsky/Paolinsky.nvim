@@ -53,3 +53,14 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Tiny code action
+vim.keymap.set("n", "<leader>ca", function()
+	require("tiny-code-action").code_action()
+end, { noremap = true, silent = true })
+
+-- Resize windows
+vim.keymap.set("n", "<leader>h", "<C-w><");
+vim.keymap.set("n", "<leader>j", "<C-w>-");
+vim.keymap.set("n", "<leader>k", "<C-w>+");
+vim.keymap.set("n", "<leader>l", "<C-w>>");
