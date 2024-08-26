@@ -30,7 +30,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -64,3 +64,11 @@ vim.keymap.set("n", "<leader>h", "<C-w><");
 vim.keymap.set("n", "<leader>j", "<C-w>-");
 vim.keymap.set("n", "<leader>k", "<C-w>+");
 vim.keymap.set("n", "<leader>l", "<C-w>>");
+
+-- Fold code
+vim.keymap.set("n", "<C-f>", "za");
+
+-- GitGutter
+vim.keymap.set("n", "<leader>cg", "<cmd>GitGutterPreviewHunk<CR>")
+vim.keymap.set("n", "<leader>cn", "<cmd>GitGutterNextHunk<CR>")
+vim.keymap.set("n", "<leader>cp", "<cmd>GitGutterPrevHunk<CR>")
