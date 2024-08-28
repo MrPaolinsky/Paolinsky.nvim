@@ -29,7 +29,10 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
-		"ruff_lsp", -- For python
+            	"ruff_lsp", -- For python
+                "pyright",
+                "tsserver",
+                "svelte"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
