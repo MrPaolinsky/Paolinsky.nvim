@@ -37,4 +37,3 @@ require'nvim-treesitter.configs'.setup {
 }
 
 
-print(vim.fn.stdpath("data"))
