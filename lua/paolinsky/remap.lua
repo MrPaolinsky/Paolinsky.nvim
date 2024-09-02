@@ -32,8 +32,8 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>K", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>J", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -50,11 +50,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
-
--- Tiny code action
-vim.keymap.set("n", "<leader>ca", function()
-	require("tiny-code-action").code_action()
-end, { noremap = true, silent = true })
 
 -- Resize windows
 vim.keymap.set("n", "<leader>h", "<C-w><");
@@ -73,3 +68,10 @@ vim.keymap.set("n", "<leader>cp", "<cmd>GitGutterPrevHunk<CR>")
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
+
+vim.keymap.set("n", "<leader>cd", function ()
+    vim.diagnostic.open_float(nil, {focus=false})
+end)
+
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)

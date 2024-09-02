@@ -30,8 +30,6 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.opt.foldmethod = "indent"
-
 -- Disable git lens in insert mode
 vim.g.blamer_show_in_insert_modes = 0
 
