@@ -32,5 +32,8 @@ vim.opt.colorcolumn = "80"
 
 -- Disable git lens in insert mode
 vim.g.blamer_show_in_insert_modes = 0
-
 vim.g.blamer_enabled = true
+
+-- Set fold method and not fold by default
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99

@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Move selection down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Move selection up
@@ -75,3 +75,6 @@ end)
 
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+
+-- Nvim Tree
+vim.keymap.set({"n", "i"}, "<C-b>", "<cmd>:NvimTreeToggle<CR>")
