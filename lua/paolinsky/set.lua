@@ -37,3 +37,6 @@ vim.g.blamer_enabled = true
 -- Set fold method and not fold by default
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
+
+-- Set font
+vim.opt.guifont="JetBrainsMono Nerd Font 14"
