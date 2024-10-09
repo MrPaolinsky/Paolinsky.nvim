@@ -28,9 +28,9 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "gopls",
-            	"ruff_lsp", -- For python
+                "ruff_lsp", -- For python
                 "pyright",
-                "tsserver",
+                "ts_ls",
                 "svelte"
             },
             handlers = {
@@ -54,7 +54,6 @@ return {
                     })
                     vim.g.zig_fmt_parse_errors = 0
                     vim.g.zig_fmt_autosave = 0
-
                 end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
@@ -70,6 +69,22 @@ return {
                         }
                     }
                 end,
+                ["pyright"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pyright.setup {
+                        capabilities = capabilities,
+                        settings = {
+                            python = {
+                                analysis = {
+                                    autoSearchPaths = true,
+                                    typeCheckingMode = "off",
+                                    diagnosticMode = "workspace",
+                                    useLibraryCodeForTypes = true
+                                }
+                            }
+                        }
+                    }
+                end
             }
         })
 
@@ -84,7 +99,7 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<Tab>'] = cmp.mapping.confirm({ select = true}),
+                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
@@ -95,7 +110,7 @@ return {
             })
         })
 
-	vim.diagnostic.config({
+        vim.diagnostic.config({
             -- update_in_insert = true,
             float = {
                 focusable = false,
@@ -108,10 +123,10 @@ return {
         })
     end,
     opts = {
-      setup = {
-        rust_analyzer = function()
-          return true 
-        end,
-      },
+        setup = {
+            rust_analyzer = function()
+                return true
+            end,
+        },
     },
 }
