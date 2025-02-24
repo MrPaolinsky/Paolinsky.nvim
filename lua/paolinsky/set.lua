@@ -1,7 +1,6 @@
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -38,5 +37,6 @@ vim.g.blamer_enabled = true
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
--- Set font
-vim.opt.guifont="JetBrainsMono Nerd Font 14"
+-- Airline
+vim.g['airline#extensions#tabline#enabled'] = 1
+vim.g['airline_theme'] = "lucius"

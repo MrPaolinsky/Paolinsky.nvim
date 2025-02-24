@@ -28,8 +28,8 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "gopls",
-                "ruff_lsp", -- For python
                 "pyright",
+                "eslint",
                 "ts_ls",
                 "svelte"
             },
@@ -50,6 +50,7 @@ return {
                                 enable_snippets = true,
                                 warn_style = true,
                             },
+                "ruff_lsp", -- For python
                         },
                     })
                     vim.g.zig_fmt_parse_errors = 0
