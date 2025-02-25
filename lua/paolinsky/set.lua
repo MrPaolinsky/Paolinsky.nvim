@@ -37,6 +37,3 @@ vim.g.blamer_enabled = true
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
--- Airline
-vim.g['airline#extensions#tabline#enabled'] = 1
-vim.g['airline_theme'] = "lucius"

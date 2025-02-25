@@ -78,3 +78,6 @@ vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
 -- Nvim Tree
 vim.keymap.set({ "n", "i" }, "<C-b>", "<cmd>:NvimTreeToggle<CR>")
+
+-- IncRename
+vim.keymap.set({"n", "i"}, "<F2>", ":IncRename ")
