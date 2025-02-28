@@ -1,7 +1,13 @@
 require("paolinsky.remap")
 require("paolinsky.set")
 
-require("autoclose").setup()
+require("transparent").setup({
+    extra_groups = {
+        "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+        "NvimTreeNormal" -- NvimTree
+    },
+})
+-- require("autoclose").setup()
 
 vim.g.rustaceanvim = {
     -- Plugin configuration

@@ -1,0 +1,1 @@
+return {"declancm/cinnamon.nvim"}
