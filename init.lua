@@ -2,7 +2,7 @@ require("config.lazy")
 require("paolinsky")
 
 -- Set theme
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme catppuccin-macchiato")
 
 -- Treesitter config
 require 'nvim-treesitter.configs'.setup {

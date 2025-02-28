@@ -31,7 +31,8 @@ return {
                 "pyright",
                 "eslint",
                 "ts_ls",
-                "svelte"
+                "svelte",
+                "denols"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -84,6 +85,24 @@ return {
                                 }
                             }
                         }
+                    }
+                end,
+                ["denols"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.denols.setup {
+                        capabilities = capabilities,
+                        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+                    }
+                    vim.g.markdown_fenced_languages = {
+                        "ts=typescript"
+                    }
+                end,
+                ["ts_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ts_ls.setup {
+                        capabilities = capabilities,
+                        root_dir = lspconfig.util.root_pattern("package.json"),
+                        single_file_support = false
                     }
                 end
             }
