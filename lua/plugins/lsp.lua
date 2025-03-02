@@ -104,7 +104,7 @@ return {
                         root_dir = lspconfig.util.root_pattern("package.json"),
                         single_file_support = false
                     }
-                end
+                end,
             }
         })
 
@@ -117,10 +117,11 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-                ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+                ['<C-[>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<C-]>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+                ["<Esc>"] = cmp.mapping.close(),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
