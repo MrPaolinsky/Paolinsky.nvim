@@ -32,7 +32,8 @@ return {
                 "eslint",
                 "ts_ls",
                 "svelte",
-                "denols"
+                "denols",
+                "clangd"
             },
             handlers = {
                 function(server_name) -- default handler (optional)

@@ -100,3 +100,13 @@ vim.keymap.set("n", "gp", ":b#<CR>", {})
 
 vim.keymap.set('n', '<space>ca', function()
     vim.lsp.buf.code_action({apply=true}) end, {})
+
+-- Tab management
+-- Magic buffer-picking mode
+vim.keymap.set('n', 'bp',   '<Cmd>BufferPick<CR>', {})
+vim.keymap.set('n', 'bpd', '<Cmd>BufferPickDelete<CR>', {})
+-- Move to previous/next
+vim.keymap.set('n', 'nb', '<Cmd>BufferPrevious<CR>', {})
+vim.keymap.set('n', 'pb', '<Cmd>BufferNext<CR>', {})
+-- Close buffer
+vim.keymap.set('n', 'bd', '<Cmd>BufferClose<CR>', {})
