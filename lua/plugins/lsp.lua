@@ -33,7 +33,8 @@ return {
                 "ts_ls",
                 "svelte",
                 "denols",
-                "clangd"
+                "clangd",
+                "jdtls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
