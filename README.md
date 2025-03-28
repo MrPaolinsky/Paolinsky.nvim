@@ -1,3 +1,4 @@
-# Paolinsky.nvim
+# 💤 LazyVim
 
-Neovim configuration based in the config from ThePrimeagen, used mainly for rust, python and svelte
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
