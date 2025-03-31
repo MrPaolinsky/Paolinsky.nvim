@@ -81,16 +81,16 @@ vim.keymap.set({ "n", "i" }, "<C-b>", "<cmd>:NvimTreeToggle<CR>")
 -- IncRename
 vim.keymap.set({"n", "i"}, "<F2>", ":IncRename ")
 
--- Setup hover keymaps
-vim.keymap.set("n", "K", require("hover").hover, { desc = "hover.nvim" })
-vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
-vim.keymap.set("n", "<C-[>", function() require("hover").hover_switch("previous") end,
-    { desc = "hover.nvim (previous source)" })
-vim.keymap.set("n", "<C-]>", function() require("hover").hover_switch("next") end, { desc = "hover.nvim (next source)" })
-
+-- -- Setup hover keymaps
+-- vim.keymap.set("n", "K", require("hover").hover, { desc = "hover.nvim" })
+-- vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
+-- vim.keymap.set("n", "<C-[>", function() require("hover").hover_switch("previous") end,
+--     { desc = "hover.nvim (previous source)" })
+-- vim.keymap.set("n", "<C-]>", function() require("hover").hover_switch("next") end, { desc = "hover.nvim (next source)" })
+--
 -- Mouse support
-vim.keymap.set('n', '<MouseMove>', require('hover').hover_mouse, { desc = "hover.nvim (mouse)" })
-vim.o.mousemoveevent = true
+-- vim.keymap.set('n', '<MouseMove>', require('hover').hover_mouse, { desc = "hover.nvim (mouse)" })
+-- vim.o.mousemoveevent = true
 
 -- go to def
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

@@ -37,22 +37,22 @@ vim.g.rustaceanvim = {
     dap = {
     },
 }
-
-require("hover").setup({
-    init = function()
-        -- Require providers
-        require("hover.providers.lsp")
-    end,
-    preview_opts = {
-        border = 'single'
-    },
-    -- Whether the contents of a currently open hover window should be moved
-    -- to a :h preview-window when pressing the hover keymap.
-    preview_window = false,
-    title = true,
-    mouse_providers = {
-        'LSP'
-    },
-    mouse_delay = 1000
-})
-
+--
+-- require("hover").setup({
+--     init = function()
+--         -- Require providers
+--         require("hover.providers.lsp")
+--     end,
+--     preview_opts = {
+--         border = 'single'
+--     },
+--     -- Whether the contents of a currently open hover window should be moved
+--     -- to a :h preview-window when pressing the hover keymap.
+--     preview_window = false,
+--     title = true,
+--     mouse_providers = {
+--         'LSP'
+--     },
+--     mouse_delay = 1000
+-- })
+--
