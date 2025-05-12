@@ -4,6 +4,7 @@ require("paolinsky")
 -- Set theme
 vim.cmd("colorscheme catppuccin-macchiato")
 vim.cmd("AirlineTheme catppuccin")
+vim.cmd("TransparentEnable")
 
 -- Treesitter config
 require 'nvim-treesitter.configs'.setup {
