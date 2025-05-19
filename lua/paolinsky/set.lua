@@ -29,6 +29,9 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- Floating code actions 
+vim.g.lsp_code_action_ui = "float" 
+
 -- Disable git lens in insert mode
 vim.g.blamer_show_in_insert_modes = 0
 vim.g.blamer_enabled = true
