@@ -98,9 +98,6 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 -- Go to prev buffer
 vim.keymap.set("n", "gp", ":b#<CR>", {})
 
-vim.keymap.set('n', '<space>ca', function()
-    vim.lsp.buf.code_action({apply=true}) end, {})
-
 -- Do not be silly :)
 vim.keymap.set({"i"}, "<C-h>", "<Left>")
 vim.keymap.set({"i"}, "<C-l>", "<Right>")

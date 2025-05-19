@@ -8,5 +8,5 @@ end)
 return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
-    dpendencies = { 'nvim-lua/plenary.nvim' }
+    dpendencies = { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' }
 }
